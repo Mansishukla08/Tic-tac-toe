@@ -109,4 +109,4 @@ while ch=='y' or ch=='Y':
         ch=raw_input("Do you want to play again (Y/N)")
 print("Thanks for playing")
 
-        
+        ~thanks
