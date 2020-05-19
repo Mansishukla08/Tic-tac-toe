@@ -1,0 +1,112 @@
+ch='y'
+while ch=='y' or ch=='Y':
+        a=[' ',' ',' ',' ',' ',' ',' ',' ',' ']
+        def design():
+                print'\t\t\t|\t|'
+                print'\t\t   %s    |  %s    |  %s  '%(a[0],a[1],a[2])
+                print'\t\t\t|\t|'
+                print '\t\t',"_"*25
+                print'\t\t\t|\t|'
+                print'\t\t   %s    |  %s    |  %s  '%(a[3],a[4],a[5])
+                print'\t\t\t|\t|'
+                print '\t\t',"_"*25
+                print'\t\t\t|\t|'
+                print'\t\t   %s    |  %s    |  %s  '%(a[6],a[7],a[8])
+                print'\t\t\t|\t|'
+        global a
+        count=0
+        design()
+        i=0
+        while (i<9):
+                if i%2==0:
+                        print("\n\t\t\t0's turn")
+                        ch=int(input("\t\tEnter ur choice for the block"))
+                        if a[ch-1]==' ':
+                                a[ch-1]='0'
+                                design()
+                        else:
+                                print("\n\t\tCHEATING!! You can't repeat a block\n")
+                                design()
+                                continue
+                        if( a[0]=='0' and a[1]=='0' and a[2]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        elif( a[3]=='0' and a[4]=='0' and a[5]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        elif( a[6]=='0' and a[7]=='0' and a[8]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        elif( a[0]=='0' and a[3]=='0' and a[6]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        elif( a[1]=='0' and a[4]=='0' and a[7]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        elif( a[2]=='0' and a[5]=='0' and a[8]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        elif( a[0]=='0' and a[4]=='0' and a[9]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        elif( a[2]=='0' and a[4]=='0' and a[6]=='0'):
+                                print "o won"
+                                count=count+1
+                                break
+                        i=i+1
+                else:
+                        print("\n\t\t\tX's turn")
+                        ch=int(input("\t\tEnter ur choice for the block"))
+                        if a[ch-1]==' ':
+                                a[ch-1]='X'
+                                design()
+                        else:
+                                print("\n\t\tCHEATING!! You can't repeat a block\n")
+                                design()
+                                continue
+                        if( a[0]=='X' and a[1]=='X' and a[2]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        elif( a[3]=='X' and a[4]=='X' and a[5]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        elif( a[6]=='X' and a[7]=='X' and a[8]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        elif( a[0]=='X' and a[3]=='X' and a[6]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        elif( a[1]=='X' and a[4]=='X' and a[7]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        elif( a[2]=='X' and a[5]=='X' and a[8]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        elif( a[0]=='X' and a[4]=='X' and a[b]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        elif( a[2]=='X' and a[4]=='X' and a[6]=='X'):
+                                print "X won"
+                                count=count+1
+                                break
+                        i=i+1
+        if count==0:
+                print("It's a Tie :/")
+        ch=raw_input("Do you want to play again (Y/N)")
+print("Thanks for playing")
+
+        
